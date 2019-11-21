@@ -1,0 +1,370 @@
+@import "_variables.scss";
+
+// -------- components card --------
+.card {
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0, 0, 0, 0.125);
+    border-radius: 0.25rem;
+
+    .card-title {
+        margin-bottom: 0.75rem;
+    }
+
+    .card-header {
+        padding: 0.75rem 1.25rem;
+        margin-bottom: 0;
+        background-color: rgba(0, 0, 0, 0.03);
+        border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+
+        &:first-child {
+            border-radius: calc(0.25rem - 1px) calc(0.25rem - 1px) 0 0;
+        }
+    }
+
+    .card-body {
+        -ms-flex: 1 1 auto;
+        flex: 1 1 auto;
+        padding: 1.25rem;
+    }
+
+    .card-footer {
+        padding: 0.75rem 1.25rem;
+        background-color: rgba(0, 0, 0, 0.03);
+        border-top: 1px solid rgba(0, 0, 0, 0.125);
+
+        &:last-child {
+            border-radius: 0 0 calc(0.25rem - 1px) calc(0.25rem - 1px);
+        }
+    }
+
+    .card-img-top {
+        width: 100%;
+        border-top-left-radius: calc(0.25rem - 1px);
+        border-top-right-radius: calc(0.25rem - 1px);
+    }
+
+    .card-img-bottom {
+        width: 100%;
+        border-bottom-right-radius: calc(0.25rem - 1px);
+        border-bottom-left-radius: calc(0.25rem - 1px);
+    }
+}
+
+// -------- form utilities ----------
+.form-group {
+    margin-bottom: 1rem;
+}
+
+label {
+    display: inline-block;
+    margin-bottom: 0.5rem;
+}
+
+.form-control {
+    display: block;
+    width: 100%;
+    height: calc(1.5em + 0.75rem + 2px);
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+
+    &::-ms-expand {
+        background-color: transparent;
+        border: 0;
+    }
+
+    &:focus {
+        color: #495057;
+        background-color: #fff;
+        border-color: $button-primary;
+        outline: 0;
+        box-shadow: 0 0 0 0.1rem rgba(46, 204, 113, 0.8);
+    }
+
+    &::-webkit-input-placeholder {
+        color: #6c757d;
+        opacity: 1;
+    }
+
+    &::-moz-placeholder {
+        color: #6c757d;
+        opacity: 1;
+    }
+
+    &:-ms-input-placeholder {
+        color: #6c757d;
+        opacity: 1;
+    }
+
+    &::-ms-input-placeholder {
+        color: #6c757d;
+        opacity: 1;
+    }
+
+    &::placeholder {
+        color: #6c757d;
+        opacity: 1;
+    }
+
+    &:disabled,
+    &[readonly] {
+        background-color: #e9ecef;
+        opacity: 1;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+        transition: none;
+    }
+}
+
+.form-control-sm {
+    height: calc(1.5em + 0.5rem + 2px);
+    padding: 0.25rem 0.5rem;
+    font-size: 0.875rem;
+    line-height: 1.5;
+    border-radius: 0.2rem;
+}
+
+.form-control-lg {
+    height: calc(1.5em + 1rem + 2px);
+    padding: 0.5rem 1rem;
+    font-size: 1.25rem;
+    line-height: 1.5;
+    border-radius: 0.3rem;
+}
+
+.form-check {
+    position: relative;
+    display: block;
+    padding-left: 1.25rem;
+
+    .form-check-input {
+        position: absolute;
+        margin-top: 0.3rem;
+        margin-left: -1.25rem;
+    }
+
+    .form-check-label {
+        margin-bottom: 0;
+    }
+
+    .form-check-input:disabled~.form-check-label {
+        color: #6c757d;
+    }
+}
+
+// -------- component button --------
+.btn {
+    display: inline-block;
+    font-weight: 400;
+    color: #212529;
+    text-align: center;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-color: transparent;
+    border: 1px solid transparent;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: 0.25rem;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out,
+        box-shadow 0.15s ease-in-out;
+    cursor: pointer;
+
+    &:hover {
+        color: #212529;
+        text-decoration: none;
+    }
+
+    &:focus,
+    &.focus {
+        outline: 0;
+        box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+    }
+
+    &.disabled,
+    &:disabled {
+        opacity: 0.65;
+    }
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: $button-primary;
+    border-color: $button-primary;
+
+    &.disabled,
+    &:disabled {
+        color: #fff;
+        background-color: $button-primary;
+        border-color: $button-primary;
+    }
+
+    &:not(:disabled):not(.disabled):active,
+    &:not(:disabled):not(.disabled).active,
+    .show>&.dropdown-toggle {
+        color: #fff;
+        background-color: $button-primary;
+        border-color: $button-primary;
+    }
+
+    &:not(:disabled):not(.disabled):active:focus,
+    &:not(:disabled):not(.disabled).active:focus,
+    .show>.btn-primary.dropdown-toggle:focus {
+        box-shadow: 0 0 0 0.2rem $button-primary-disabled;
+    }
+}
+
+.btn-danger {
+    color: #fff;
+    background-color: #dc3545;
+    border-color: #dc3545;
+
+    &:hover {
+        color: #fff;
+        background-color: #c82333;
+        border-color: #bd2130;
+    }
+
+    &:focus,
+    &.focus {
+        box-shadow: 0 0 0 0.2rem rgba(225, 83, 97, 0.5);
+    }
+
+    &.disabled,
+    &:disabled {
+        color: #fff;
+        background-color: #dc3545;
+        border-color: #dc3545;
+    }
+
+
+    &:not(:disabled):not(.disabled):active,
+    &:not(:disabled):not(.disabled).active,
+    .show>&.dropdown-toggle {
+        color: #fff;
+        background-color: #bd2130;
+        border-color: #b21f2d;
+    }
+
+
+    &:not(:disabled):not(.disabled):active:focus,
+    &:not(:disabled):not(.disabled).active:focus,
+    .show>&.dropdown-toggle:focus {
+        box-shadow: 0 0 0 0.2rem rgba(225, 83, 97, 0.5);
+    }
+}
+
+.btn-block {
+    display: block;
+    width: 100%;
+}
+
+.btn-lg,
+.btn-group-lg>.btn {
+    padding: 0.5rem 1rem;
+    font-size: 1.25rem;
+    line-height: 1.5;
+    border-radius: 0.3rem;
+}
+
+.btn-sm,
+.btn-group-sm>.btn {
+    padding: 0.25rem 0.5rem;
+    font-size: 0.875rem;
+    line-height: 1.5;
+    border-radius: 0.2rem;
+}
+
+// -------- components alert ---------
+.alert {
+    position: relative;
+    padding: 0.75rem 1rem;
+    margin-bottom: 1rem;
+    border: 1px solid transparent;
+    border-radius: 0.25rem;
+}
+
+.alert-success {
+    color: #155724;
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+}
+
+.alert-warning {
+    color: #856404;
+    background-color: #fff3cd;
+    border-color: #ffeeba;
+}
+
+.alert-danger {
+    color: #721c24;
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+}
+
+// ------ validation -------
+.invalid-feedback {
+    // display: none;
+    width: 100%;
+    margin-top: 0.25rem;
+    font-size: 80%;
+    color: #dc3545;
+}
+
+.invalid {
+    input {
+        border-color: #dc3545;
+        box-shadow: 0 0 0 0.1rem rgba(220, 53, 69, 0.25);
+    }
+}
+
+//----- Discount -----
+
+#addDiscount {
+    top: 48px;
+    margin-bottom: 57px;
+    margin-top: 2%;
+
+    .modal-body {
+        max-height: 455px;
+        padding: 10px;
+    }
+}
+
+// .btn-block-disc {
+//     display: block;
+//     width: 100%;
+//     margin-top: 7%;
+// }
+
+.pos-setting-mobile {
+    height: 100px;
+}
+
+.form-input-line {
+    height: 30px;
+    border-radius: 0;
+    border: none;
+    border-bottom: 1px solid #cccccc;
+    position: relative;
+    font-size: 90%;
+}

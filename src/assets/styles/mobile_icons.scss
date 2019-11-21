@@ -1,0 +1,33 @@
+.fa-sync:before {
+    content: "\F021";
+}
+.sidenav:not(.show) {
+    .icon, .icon * {
+        background: none;
+    }
+}
+.sidenav.show .sidenav-item .nav-link {
+    .nav-pos-icon, .router-link-active .nav-pos-icon {
+        width: 1.8rem;
+        height: 1.5rem;
+        background-image: url("../images/Nav-Icon-Pos-White.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        transition: 0s;
+    }
+}
+
+.icon {
+    width: 18px;
+    height: 18px;
+    background-repeat: no-repeat;
+    background-position: center;
+    &.icon-discount {
+        background-image: url("../images/bargain.png");
+        width: 24px;
+        height: 24px;
+    }
+    &.icon-delete {
+        background-image: url("../images/clear.png");
+    }
+}

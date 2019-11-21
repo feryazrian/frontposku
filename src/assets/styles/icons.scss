@@ -1,0 +1,97 @@
+.barcode-print {
+    display: inline-block;
+    margin: 10px 5px;
+    text-align: center;
+}
+
+.content-container-hide {
+    padding-left: 0px;
+    margin-top: 0px;
+}
+
+.content-container-hide .content-wrapper-hide {
+    padding: 0px;
+    margin-left: 0px;
+}
+
+.pos-icon {
+    width: 60px;
+    height: 55px;
+    display: inline-block;
+    background-size: cover;
+    background-image: url("../images/Icon-Pos.svg");
+}
+
+.nav-pos-icon {
+    width: 35px !important;
+    height: 35px !important;
+    display: inline-block;
+    background-size: cover;
+    background-image: url("../images/Nav-Icon-Pos.png");
+}
+
+.barcode-icon {
+    background-image: url("../images/Icon-Barcode.svg");
+    width: 26px;
+    height: 26px;
+}
+
+.print-icon {
+    background-image: url("../images/Icon-Printer.svg");
+    width: 26px;
+    height: 26px;
+}
+
+.router-link-active,
+.active {
+    .pos-icon {
+        background-image: url("../images/Icon-Pos-Active.svg");
+    }
+
+    &.pos-icon {
+        background-image: url("../images/Icon-Pos-Active.svg");
+    }
+
+    .nav-pos-icon {
+        background-image: url("../images/Nav-Icon-Pos-Active.png");
+    }
+
+    &.nav-pos-icon {
+        background-image: url("../images/Nav-Icon-Pos-Active.png");
+    }
+}
+
+.edit-discount-icon {
+    width: 10px;
+    height: 10px;
+    display: inline-block;
+    background-size: cover;
+    background-image: url("../images/edit-icon.png");
+    margin: 2px auto;
+}
+
+@media (max-width: 480px) {
+    .custom-img {
+        width: 100%;
+        height: 270px;
+        display: inline-block;
+        background-image: url("../images/layer-green.png");
+        cursor: pointer;
+        background-size: 100% auto;
+        background-repeat: round;
+        line-height: 21;
+        max-width: 100%;
+    }
+
+}
+
+.pos-img-login {
+    display: flex;
+    width: 100%;
+    max-width: 250px;
+    height: 20%;
+    margin: 100px auto;
+    background-image: url('../images/layer-pos.png');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
